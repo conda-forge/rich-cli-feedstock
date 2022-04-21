@@ -11,7 +11,7 @@ source:
 
 build:
   noarch: python
-  number: 0
+  number: 1
   script_env: PYTHONUTF8=1
   entry_points:
     - rich = rich_cli.__main__:run
@@ -46,3 +46,4 @@ about:
 extra:
   recipe-maintainers:
     - davidbrochart
+    - willmcgugan
