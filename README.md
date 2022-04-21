@@ -146,4 +146,5 @@ Feedstock Maintainers
 =====================
 
 * [@davidbrochart](https://github.com/davidbrochart/)
+* [@willmcgugan](https://github.com/willmcgugan/)
 
