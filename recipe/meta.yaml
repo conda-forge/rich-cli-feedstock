@@ -1,5 +1,5 @@
 {% set name = "rich-cli" %}
-{% set version = "1.6.0" %}
+{% set version = "1.6.1" %}
 
 package:
   name: {{ name|lower }}
@@ -7,15 +7,15 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: 3cee3894fb3f777cabf20ecf5e422131825f848f184c67cfed24044581b7f934
+  sha256: 18db9408e5e670f54bfe93a2b533a0f10261232c70fa92a4343440777ed50359
 
 build:
   noarch: python
-  number: 1
+  number: 0
   script_env: PYTHONUTF8=1
   entry_points:
     - rich = rich_cli.__main__:run
-  script: "{{ PYTHON }} -m pip install . --no-deps --ignore-installed --no-cache-dir -vvv"
+  script: {{ PYTHON }} -m pip install . --no-deps --ignore-installed --no-cache-dir -vvv
 
 requirements:
   host:
