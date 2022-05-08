@@ -1,5 +1,5 @@
 {% set name = "rich-cli" %}
-{% set version = "1.7.0" %}
+{% set version = "1.8.0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: 7e9a2bca579cf47fbd1b6bfc0f43b7d9e93b390b376114a66b5c4ea5a90296a9
+  sha256: 7f99ed213fb18c25999b644335f74d2be621a3a68593359e7fc62e95fe7e9a8a
 
 build:
   noarch: python
