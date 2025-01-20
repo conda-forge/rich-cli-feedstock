@@ -6,12 +6,12 @@ package:
   version: {{ version }}
 
 source:
-  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
+  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
   sha256: 7f99ed213fb18c25999b644335f74d2be621a3a68593359e7fc62e95fe7e9a8a
 
 build:
   noarch: python
-  number: 0
+  number: 1
   script_env: PYTHONUTF8=1
   entry_points:
     - rich = rich_cli.__main__:run
@@ -19,11 +19,11 @@ build:
 
 requirements:
   host:
-    - python >=3.7
+    - python {{ python_min }}
     - pip
     - poetry
   run:
-    - python >=3.7
+    - python >={{ python_min }}
     - rich >=12.0.0
     - click >=8.0.0
     - requests >=2.0.0
@@ -31,6 +31,8 @@ requirements:
     - rich-rst >=1.1.7
 
 test:
+  requires:
+    - python {{ python_min }}
   commands:
     - rich --help
 
