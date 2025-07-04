@@ -1,17 +1,17 @@
 {% set name = "rich-cli" %}
-{% set version = "1.8.0" %}
+{% set version = "1.8.1" %}
 
 package:
   name: {{ name|lower }}
   version: {{ version }}
 
 source:
-  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: 7f99ed213fb18c25999b644335f74d2be621a3a68593359e7fc62e95fe7e9a8a
+  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/{{ name | replace('-', '_') }}-{{ version }}.tar.gz
+  sha256: 16992bcbd454974dc53671ba1a12e189148566164aaa7370bdf6648c8b1438c3
 
 build:
   noarch: python
-  number: 1
+  number: 0
   script_env: PYTHONUTF8=1
   entry_points:
     - rich = rich_cli.__main__:run
